@@ -11,21 +11,21 @@ RUN  echo  'http://dl-cdn.alpinelinux.org/alpine/edge/main/' >> /etc/apk/reposit
 RUN  echo  'http://dl-cdn.alpinelinux.org/alpine/edge/testing/' >> /etc/apk/repositories
 
 RUN  apk update && apk add \
-			    php7-gd \
-                php7-mcrypt \
-			    php7-json \
-			    php7-dom \
-			    php7-redis \
-			    php7-mongodb \
-			    php7-openssl \
-			    php7-pdo_odbc \
-			    php7-json \
-                php7-dom \
-			    php7-mysqli \
-			    php7-pdo_pgsql \
-			    php7-pdo_mysql \
-			    php7-pdo_pgsql \
-			    php7-gettext \
+				php7-gd \
+				php7-mcrypt \
+				php7-json \
+				php7-dom \
+				php7-redis \
+				php7-mongodb \
+				php7-openssl \
+				php7-pdo_odbc \
+				php7-json \
+				php7-dom \
+				php7-mysqli \
+				php7-pdo_pgsql \
+				php7-pdo_mysql \
+				php7-pdo_pgsql \
+				php7-gettext \
 				php7-xmlreader \
 				php7-xmlrpc \
 				php7-xml \
@@ -41,4 +41,4 @@ RUN  apk update && apk add \
 				php7-phar \
 				php7-opcache \
 				php7-mbstring \
-		        php7-zlib 
+				php7-zlib 

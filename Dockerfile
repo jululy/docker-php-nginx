@@ -4,6 +4,9 @@ FROM  trafex/alpine-nginx-php7
 COPY config/nginx.conf /etc/nginx/nginx.conf
 COPY config/default.conf /etc/nginx/conf.d/default.conf
 
+#restart auto when something is broken down with the process of php-fpm or nginx 
+COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 #install php extenstion mode
 
 RUN  echo  'http://dl-cdn.alpinelinux.org/alpine/edge/community/' >> /etc/apk/repositories

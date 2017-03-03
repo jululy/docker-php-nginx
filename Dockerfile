@@ -8,10 +8,10 @@ RUN  echo 'http://dl-cdn.alpinelinux.org/alpine/latest-stable/community/'>> /etc
 
 #install php extenstion mode
 RUN  apk update && apk add \
-                php7 \
+				php7 \
 				php7-fpm \
 				nginx   \
-			    supervisor  \
+				supervisor  \
 				php7-gd \
 				php7-mcrypt \
 				php7-json \

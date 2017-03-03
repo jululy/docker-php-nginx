@@ -1,20 +1,24 @@
-Docker PHP-FPM 7.0 & Nginx 1.10 on Alpine Linux
-==============================================
-Example PHP-FPM 7.0 & Nginx 1.10 setup for Docker, build on [Alpine Linux](http://www.alpinelinux.org/).
-The image is only +/- 60MB large.
+Description
+-----
+the Docker imag contains most of php extensions.  further more ,the installed supervisor  ensure that nginx or php-fpm 
 
+can restart when something is unusually broken down.
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/trafex/alpine-nginx-php7.svg)](https://hub.docker.com/r/trafex/alpine-nginx-php7/)
+most of all ,the image is just only  100MB large. [Dockerfile](https://github.com/jululy/docker-php-nginx/blob/stable/Dockerfile)
+
 
 Usage
 -----
 Start the Docker containers:
 
-    sudo docker run -p 80:80 trafex/alpine-nginx-php7
+       docker pull lyc1011029/alpine-nginx-php7
 
-See the PHP info on http://localhost, or the static html page on http://localhost/test.html
+       docker run -d -p 80:80 --name web  lyc1011029/alpine-nginx-php7
 
-Resources & inspiration
------------------------
-https://ejosh.co/de/2015/09/how-to-link-docker-containers-together
-https://github.com/johanan/Ansible-and-Docker
+    -----
+The php code dir in the container is  /var/www/html/
+
+      so you should   deploy the code  by enter the container  by  cmd : docker exec -it  web /bin/sh
+or you can also mount directory on the host machine
+
+    See the PHP info on http://localhost, or the static html page on http://localhost/test.html

@@ -54,6 +54,8 @@ RUN mkdir -p /var/www/html
 WORKDIR /var/www/html
 COPY src/ /var/www/html/
 
+#add power
+RUN chmod o+w /var/www/html -R
 
 #restart auto when something is broken down with the process of php-fpm or nginx 
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
